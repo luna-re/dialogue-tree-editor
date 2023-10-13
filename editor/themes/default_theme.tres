@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cun8xsny48wty"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wblju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qv7t1"]
+bg_color = Color(1, 1, 1, 0.12549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0m4x"]
+bg_color = Color(1, 1, 1, 0.0509804)
+
+[resource]
+GraphEdit/colors/grid_major = Color(1, 1, 1, 0.0509804)
+GraphEdit/colors/grid_minor = Color(1, 1, 1, 0.0509804)
+GraphEdit/colors/selection_fill = Color(1, 1, 1, 0.0509804)
+GraphEdit/colors/selection_stroke = Color(0.784314, 0.784314, 0.784314, 0.466667)
+GraphEdit/styles/menu_panel = SubResource("StyleBoxEmpty_wblju")
+GraphEditMinimap/colors/resizer_color = Color(1, 1, 1, 0)
+GraphEditMinimap/styles/camera = SubResource("StyleBoxFlat_qv7t1")
+GraphEditMinimap/styles/panel = SubResource("StyleBoxFlat_f0m4x")
+HSplitContainer/constants/minimum_grab_thickness = 0
+HSplitContainer/constants/separation = 0
+MarginContainer/constants/margin_bottom = 5
+MarginContainer/constants/margin_left = 5
+MarginContainer/constants/margin_right = 5
+MarginContainer/constants/margin_top = 5

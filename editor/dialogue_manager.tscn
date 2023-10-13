@@ -1,0 +1,207 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg828dbcke4rn"]
+
+[ext_resource type="Theme" uid="uid://cun8xsny48wty" path="res://editor/themes/default_theme.tres" id="1_gkjgj"]
+
+[sub_resource type="GDScript" id="GDScript_js7ln"]
+script/source = "extends GraphEdit
+
+func _on_connection_request(from_node, from_port, to_node, to_port):
+	connect_node(from_node, from_port, to_node, to_port)
+"
+
+[node name="DialogueManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gkjgj")
+
+[node name="AppPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AppPanel"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="AppPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="AppPanel/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="AppPanel/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="AppPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="AppPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer/MarginContainer"]
+layout_mode = 2
+text = "Controls Here"
+
+[node name="MarginContainer2" type="MarginContainer" parent="AppPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AppPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer/MarginContainer2"]
+layout_mode = 2
+text = "Buttone of Control"
+
+[node name="VSeparator" type="VSeparator" parent="AppPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+
+[node name="DividerRect" type="ColorRect" parent="AppPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="AppPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 300
+
+[node name="PanelContainer" type="PanelContainer" parent="AppPanel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AppPanel/VBoxContainer/HSplitContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Tree" type="Tree" parent="AppPanel/VBoxContainer/HSplitContainer/PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GraphEdit" type="GraphEdit" parent="AppPanel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+scroll_offset = Vector2(-300, -5)
+panning_scheme = 1
+right_disconnects = true
+show_zoom_buttons = false
+show_grid_buttons = false
+show_minimap_button = false
+show_arrange_button = false
+script = SubResource("GDScript_js7ln")
+
+[node name="GraphNode" type="GraphNode" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 186.0
+offset_right = 695.0
+offset_bottom = 330.0
+mouse_filter = 1
+position_offset = Vector2(-54, 181)
+title = "Happy Nodelings Everyone!!!"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="PanelContainer" type="PanelContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode/PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode/PanelContainer/HBoxContainer/MarginContainer"]
+modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Text of tummies.
+It just so much text, ok? Lovely textings!! ^A^
+Dats just so happy text."
+
+[node name="GraphNode2" type="GraphNode" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit"]
+offset_left = 96.0
+offset_top = 356.0
+offset_right = 545.0
+offset_bottom = 573.0
+mouse_filter = 1
+position_offset = Vector2(-204, 351)
+title = "That's just choice node!"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+
+[node name="PanelContainer" type="PanelContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer/HBoxContainer/MarginContainer"]
+modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Text of tummies.
+It just so much text, ok? Lovely textings!! ^A^
+Dats just so happy text."
+
+[node name="PanelContainer2" type="PanelContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer2/HBoxContainer/MarginContainer"]
+modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AppPanel/VBoxContainer/HSplitContainer/GraphEdit/GraphNode2/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Text of tummies.
+It just so much text, ok? Lovely textings!! ^A^
+Dats just so happy text."
+
+[connection signal="connection_request" from="AppPanel/VBoxContainer/HSplitContainer/GraphEdit" to="AppPanel/VBoxContainer/HSplitContainer/GraphEdit" method="_on_connection_request"]
